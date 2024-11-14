@@ -25,15 +25,15 @@
 <meta property="og:site_name" content="Ray&#39;blog">
 <meta property="og:description" content="前言在side project中以Element Plus的元件為主，在切換語言的需求中，需要使用到下拉式選單去選擇語言，但抓下來之後發現下拉式選單樣式蓋不掉。（來源：Element Plus範例） 過程實際看了抓下來的html，才發現選單內容在&lt;body&gt;下面。 我需要移除最外層的shadow，而且想要使用scope限制樣式只能更改這個檔案中作用，後來去看了一下文件，可以透過tele">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://raylanraylan.github.io/blog/Snipaste_2024-11-14_18-38-27.png">
-<meta property="og:image" content="https://raylanraylan.github.io/blog/Snipaste_2024-11-14_18-37-47.png">
+<meta property="og:image" content="https://raylanraylan.github.io/blog/Element-Plus%E6%9B%B4%E6%94%B9%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E7%9A%84%E6%A8%A3%E5%BC%8F/Snipaste_2024-11-14_18-38-27.png">
+<meta property="og:image" content="https://raylanraylan.github.io/blog/Element-Plus%E6%9B%B4%E6%94%B9%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E7%9A%84%E6%A8%A3%E5%BC%8F/Snipaste_2024-11-14_18-37-47.png">
 <meta property="article:published_time" content="2024-11-14T20:21:16.000Z">
 <meta property="article:modified_time" content="2024-11-14T13:51:37.892Z">
 <meta property="article:author" content="Ray">
 <meta property="article:tag" content="Vue">
 <meta property="article:tag" content="Element Plus">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raylanraylan.github.io/blog/Snipaste_2024-11-14_18-38-27.png">
+<meta name="twitter:image" content="https://raylanraylan.github.io/blog/Element-Plus%E6%9B%B4%E6%94%B9%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E7%9A%84%E6%A8%A3%E5%BC%8F/Snipaste_2024-11-14_18-38-27.png">
     
     
     <!--- Icon Part-->
@@ -566,7 +566,7 @@
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在side project中以Element Plus的元件為主，在切換語言的需求中，需要使用到下拉式選單去選擇語言，但抓下來之後發現下拉式選單樣式蓋不掉。<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/blog/Snipaste_2024-11-14_18-38-27.png"
+                     data-src="/blog/Element-Plus%E6%9B%B4%E6%94%B9%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E7%9A%84%E6%A8%A3%E5%BC%8F/Snipaste_2024-11-14_18-38-27.png"
                       alt="截圖"
                 ><br>（來源：Element Plus範例）</p>
 <h2 id="過程"><a href="#過程" class="headerlink" title="過程"></a>過程</h2><p>實際看了抓下來的html，才發現選單內容在<code>&lt;body&gt;</code>下面。</p>
@@ -574,7 +574,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/blog/Snipaste_2024-11-14_18-37-47.png"
+                     data-src="/blog/Element-Plus%E6%9B%B4%E6%94%B9%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E7%9A%84%E6%A8%A3%E5%BC%8F/Snipaste_2024-11-14_18-37-47.png"
                       alt="截圖"
                 ><br>（<code>teleported</code>修改為false的結果）</p>
 <p>回到整個元件下面，就能透過<code>:deep</code>跟外層class去抓選單整個內容的樣式，<code>shadow</code>就這樣成功被清掉。</p>
