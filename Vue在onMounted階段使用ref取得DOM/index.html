@@ -18,12 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="問題在做個人網頁的時候，網頁的header固定浮動在最上層，以至於下面的layout都會往上跑，導致header遮住內容的問題，因此我習慣在header的下面留個空間，我想要從身為子元件的header傳它的高度給app.vue，再把main往下推，因此我需要在載入網頁的時候，就得到header的高度。 但我實際使用ref取DOM再取header的高度，或者是透過JS原生給的queryselecto">
+    
+    
+        
+        <meta name="description" content="個人感想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Vue網頁載入時取得header高度並避免遮擋">
 <meta property="og:url" content="https://raylanraylan.github.io/blog/Vue%E5%9C%A8onMounted%E9%9A%8E%E6%AE%B5%E4%BD%BF%E7%94%A8ref%E5%8F%96%E5%BE%97DOM/index.html">
 <meta property="og:site_name" content="Ray&#39;blog">
-<meta property="og:description" content="問題在做個人網頁的時候，網頁的header固定浮動在最上層，以至於下面的layout都會往上跑，導致header遮住內容的問題，因此我習慣在header的下面留個空間，我想要從身為子元件的header傳它的高度給app.vue，再把main往下推，因此我需要在載入網頁的時候，就得到header的高度。 但我實際使用ref取DOM再取header的高度，或者是透過JS原生給的queryselecto">
+<meta property="og:description" content="個人感想">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raylanraylan.github.io/blog/images/Snipaste_2024-10-25_20-24-01.png">
 <meta property="article:published_time" content="2024-10-25T20:35:23.000Z">
@@ -35,10 +38,10 @@
     
     
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="https://icon-icons.com/icons2/1301/PNG/512/if-food-c203-2427849_85703.png" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://icon-icons.com/icons2/1301/PNG/512/if-food-c203-2427849_85703.png">
+    <link rel="icon" type="image/png" href="/blog/images/if-food-c203-2427849_85703.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/if-food-c203-2427849_85703.png">
     <meta name="theme-color" content="#A31F34">
-    <link rel="shortcut icon" href="https://icon-icons.com/icons2/1301/PNG/512/if-food-c203-2427849_85703.png">
+    <link rel="shortcut icon" href="/blog/images/if-food-c203-2427849_85703.png">
     <!--- Page Info-->
     
     <title>
@@ -60,7 +63,7 @@
 
     
         
-<link rel="stylesheet" href="/blog/assets/build/styles.css">
+<link rel="stylesheet" href="/blog/css/build/tailwind.css">
 
     
 
@@ -78,13 +81,13 @@
     
     
         
-<script src="/blog/js/libs/anime.min.js"></script>
+<script src="/blog/js/build/libs/anime.min.js"></script>
 
     
 
     <script id="hexo-configurations">
     window.config = {"hostname":"raylanraylan.github.io","root":"/blog/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推薦閱讀","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":false,"site_uv":false,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"寫一些個人感想","subtitle":{"text":["請往下捲或選擇歸檔"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Github":{"icon":"fa-regular fa-user","path":"https://github.com/raylanraylan"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/3/3 11:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推薦閱讀","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":false,"site_uv":false,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"寫一些個人感想","subtitle":{"text":["請往下捲或選擇歸檔"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Github":{"icon":"fa-regular fa-user","path":"https://github.com/raylanraylan"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/3/3 11:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -109,21 +112,20 @@
 <meta name="generator" content="Hexo 7.2.0"></head>
 
 
-<body>
-<div class="progress-bar-container">
-    
 
-    
-        <span class="pjax-progress-bar"></span>
-<!--        <span class="swup-progress-icon">-->
-<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
-<!--        </span>-->
-    
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
 </div>
 
-
-
-    <style>
+<style>
     :root {
         --preloader-background-color: #fff;
         --preloader-text-color: #000;
@@ -272,13 +274,11 @@
 
 <main class="page-container" id="swup">
 
-    
+	
 
-    <div class="main-content-container flex flex-col justify-between min-h-dvh">
-
-
-        <div class="main-content-header">
-            <header class="navbar-container px-6 md:px-12">
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
     <div class="navbar-content transition-navbar ">
         <div class="left">
             
@@ -461,38 +461,35 @@
 </header>
 
 
-        </div>
+		</div>
 
-        <div class="main-content-body">
+		<div class="main-content-body transition-fade-up">
+			
 
-            
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
 
-            <div class="main-content">
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">如何在Vue網頁載入時取得header高度並避免遮擋</h1>
+			</div>
+			
+		</div>
 
-                
-                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
-    <div class="article-content-container">
-
-        <div class="article-title relative w-full">
-            
-                <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">如何在Vue網頁載入時取得header高度並避免遮擋</h1>
-                </div>
-            
-            </div>
-
-        
-            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
-                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
-                    <img src="https://icon-icons.com/icons2/1301/PNG/512/if-food-c203-2427849_85703.png">
-                </div>
-                <div class="info flex flex-col justify-between">
-                    <div class="author flex items-center">
-                        <span class="name text-default-text-color text-lg font-semibold">Ray</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/blog/images/if-food-c203-2427849_85703.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Ray</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
         <span class="desktop">2024-10-25 20:35:23</span>
@@ -548,16 +545,16 @@
     
 </div>
 
-                    </div>
-                </div>
-            </div>
-        
+				</div>
+			</div>
+		</div>
+		
 
-        
+		
 
 
-        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在做個人網頁的時候，網頁的header固定浮動在最上層，以至於下面的layout都會往上跑，導致header遮住內容的問題，因此我習慣在header的下面留個空間，我想要從身為子元件的header傳它的高度給app.vue，再把main往下推，因此我需要在載入網頁的時候，就得到header的高度。</p>
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在做個人網頁的時候，網頁的header固定浮動在最上層，以至於下面的layout都會往上跑，導致header遮住內容的問題，因此我習慣在header的下面留個空間，我想要從身為子元件的header傳它的高度給app.vue，再把main往下推，因此我需要在載入網頁的時候，就得到header的高度。</p>
 <p>但我實際使用<code>ref</code>取DOM再取header的高度，或者是透過JS原生給的queryselector也選不到，後來處理爬文老半天才透過別人的寫法得到解決方案。</p>
 <h2 id="那這篇文章要說什麼？"><a href="#那這篇文章要說什麼？" class="headerlink" title="那這篇文章要說什麼？"></a>那這篇文章要說什麼？</h2><p>其實是我回去看官網之後，才注意到這段話：<br>**Note that you can only access the ref after the component is mounted. **</p>
 <p>我截了Vue官方對於生命週期說明的圖，在上面標註一下我理解的部分：<br><img  
@@ -569,17 +566,17 @@
 <p>也就是說我一直在錯誤的時機點想要訪問到該DOM的資訊，但該DOM根本還沒被渲染，但又希望整個網頁能跑完時就能得到DOM的資訊。</p>
 <h2 id="解決的辦法"><a href="#解決的辦法" class="headerlink" title="解決的辦法"></a>解決的辦法</h2><p>後來在網路上看到<code>ResizeObserver</code>的用法解決了我的煩腦，它可以在元素產生變化時重新偵測尺寸。</p>
 <p>因此我能先讓這個元素使用這個API，等它因為渲染之後被改變，就能立刻拿到我要的高度。</p>
-<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 捕捉headerContainer</span></span><br><span class="line"><span class="keyword">const</span> headerContainer = ref&lt;<span class="title class_">HTMLDivElement</span>&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 headerContainer 的變化，當元素掛載時調用 getHeightValue</span></span><br><span class="line"><span class="title function_">watch</span>(headerContainer,<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (element) <span class="title function_">getHeightValue</span>(element);</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化 ResizeObserver</span></span><br><span class="line"><span class="keyword">const</span> observer = <span class="title function_">ref</span>()</span><br><span class="line"><span class="comment">//執行觀察元素尺寸</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getHeightValue</span>(<span class="params">element:HTMLDivElement</span>)&#123;</span><br><span class="line"><span class="comment">// 建立 ResizeObserver 實例，監聽元素尺寸變化</span></span><br><span class="line">  observer.<span class="property">value</span> = <span class="keyword">new</span> <span class="title class_">ResizeObserver</span>(<span class="function">(<span class="params">entries</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//取得內容尺寸觀察</span></span><br><span class="line">  <span class="keyword">const</span> rect = entries[<span class="number">0</span>].<span class="property">contentRect</span></span><br><span class="line">    <span class="keyword">if</span> (rect) &#123;</span><br><span class="line">       <span class="comment">// 發送高度值給父元件</span></span><br><span class="line">      <span class="title function_">emit</span>(<span class="string">&#x27;heightSize&#x27;</span>,rect.<span class="property">height</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">//開始觀察指定元素</span></span><br><span class="line">  observer.<span class="property">value</span>.<span class="title function_">observe</span>(element)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//離開頁面時移除觀察</span></span><br><span class="line"><span class="title function_">onBeforeUnmount</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">  observer.<span class="property">value</span>.<span class="title function_">unobserve</span>();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 捕捉headerContainer</span></span><br><span class="line"><span class="keyword">const</span> headerContainer = ref&lt;<span class="title class_">HTMLDivElement</span>&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 headerContainer 的變化，當元素掛載時調用 getHeightValue</span></span><br><span class="line"><span class="title function_">watch</span>(headerContainer,<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (element) <span class="title function_">getHeightValue</span>(element);</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化 ResizeObserver</span></span><br><span class="line"><span class="keyword">const</span> observer = <span class="title function_">ref</span>()</span><br><span class="line"><span class="comment">//執行觀察元素尺寸</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getHeightValue</span>(<span class="params">element:HTMLDivElement</span>)&#123;</span><br><span class="line"><span class="comment">// 建立 ResizeObserver 實例，監聽元素尺寸變化</span></span><br><span class="line">  observer.<span class="property">value</span> = <span class="keyword">new</span> <span class="title class_">ResizeObserver</span>(<span class="function">(<span class="params">entries</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//取得內容尺寸觀察</span></span><br><span class="line">  <span class="keyword">const</span> rect = entries[<span class="number">0</span>].<span class="property">contentRect</span></span><br><span class="line">    <span class="keyword">if</span> (rect) &#123;</span><br><span class="line">       <span class="comment">// 發送高度值給父元件</span></span><br><span class="line">      <span class="title function_">emit</span>(<span class="string">&#x27;heightSize&#x27;</span>,rect.<span class="property">height</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">//開始觀察指定元素</span></span><br><span class="line">  observer.<span class="property">value</span>.<span class="title function_">observe</span>(element)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//離開頁面時移除觀察</span></span><br><span class="line"><span class="title function_">onBeforeUnmount</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">  observer.<span class="property">value</span>.<span class="title function_">unobserve</span>();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<h2 id="來源"><a href="#來源" class="headerlink" title="來源"></a>來源</h2><p><a class="link"   target="_blank" rel="noopener" href="https://medium.com/@ankurr.singhal/create-your-own-custom-vue-hooks-useelementsize-d20d6a73aef5" >Create your own custom Vue Hooks: useElementSize <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51743599/watch-height-of-an-element-in-vuejs" >Watch height of an element in VueJS <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver" >ResizeObserver <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="來源"><a href="#來源" class="headerlink" title="來源"></a>來源</h2><p><a class="link"   target="_blank" rel="noopener" href="https://medium.com/@ankurr.singhal/create-your-own-custom-vue-hooks-useelementsize-d20d6a73aef5" >Create your own custom Vue Hooks: useElementSize<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51743599/watch-height-of-an-element-in-vuejs" >Watch height of an element in VueJS<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver" >ResizeObserver<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 
-        </div>
+		</div>
 
-        
-            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
-                <div class="article-copyright-info-container">
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
     <ul>
         <li><strong>標題:</strong> 如何在Vue網頁載入時取得header高度並避免遮擋</li>
         <li><strong>作者:</strong> Ray</li>
@@ -607,62 +604,56 @@
     </ul>
 </div>
 
-            </div>
-        
+		</div>
+		
 
-        
-            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/blog/tags/Vue/">#Vue</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/blog/tags/Vue/">#Vue</a>&nbsp;
+			</li>
+			
+		</ul>
+		
 
-        
+		
 
-        
-            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
-                
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/blog/%E5%9C%A8Vue3%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E7%9A%84icon%E5%BF%83%E5%BE%97/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">在Vue3管理使用的icon心得</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="next"
-                        rel="next"
-                        href="/blog/src%E8%88%87href%E7%9A%84%E5%B7%AE%E7%95%B0/"
-                        >
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Src與href的差異</span>
-                                <span class="post-nav-item">下一篇</span>
-                            </span>
-                            <span class="right arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/blog/%E5%9C%A8Vue3%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E7%9A%84icon%E5%BF%83%E5%BE%97/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">在Vue3管理使用的icon心得</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/blog/src%E8%88%87href%E7%9A%84%E5%B7%AE%E7%95%B0/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Src與href的差異</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
 
 
-        
-            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
-                <div class="comments-container mt-10 w-full ">
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
     <div id="comment-anchor" class="w-full h-2.5"></div>
     <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
         留言
@@ -702,36 +693,30 @@
     
 </div>
 
-            </div>
-        
-    </div>
+		</div>
+		
+	</div>
 
-    
-        <div class="toc-content-container">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <div class="toc-title">目錄</div>
-        <div class="page-title">如何在Vue網頁載入時取得header高度並避免遮擋</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%8F%E9%A1%8C"><span class="nav-text">問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E8%A6%81%E8%AA%AA%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-text">那這篇文章要說什麼？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B1%BA%E7%9A%84%E8%BE%A6%E6%B3%95"><span class="nav-text">解決的辦法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%86%E6%BA%90"><span class="nav-text">來源</span></a></li></ol>
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目錄</div>
+		<div class="page-title">如何在Vue網頁載入時取得header高度並避免遮擋</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%8F%E9%A1%8C"><span class="nav-text">問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E8%A6%81%E8%AA%AA%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-text">那這篇文章要說什麼？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B1%BA%E7%9A%84%E8%BE%A6%E6%B3%95"><span class="nav-text">解決的辦法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%86%E6%BA%90"><span class="nav-text">來源</span></a></li></ol>
 
-    </div>
+	</div>
 </div>
-        </div>
-    
+	</div>
+	
 </div>
+			</div>
 
+			
+		</div>
 
-
-                
-
-            </div>
-
-            
-
-        </div>
-
-        <div class="main-content-footer">
-            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
     <div class="info-container py-3 text-center">
         
         <div class="text-center">
@@ -752,7 +737,7 @@
         
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
-            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
+            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
         </div>
         
         
@@ -781,95 +766,92 @@
         
     </div>  
 </footer>
-        </div>
-    </div>
+		</div>
+	</div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="article-tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="right-bottom-tools page-aside-toggle">
-                <i class="fa-regular fa-outdent"></i>
-            </li>
-        
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
 
-        <!-- go comment -->
-        
-            <li class="go-comment">
-                <i class="fa-regular fa-comments"></i>
-            </li>
-        
-    </ul>
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
 </div>
 
-        </div>
-    
-
-    <div class="right-side-tools-container">
-        <div class="side-tools-container">
-    <ul class="hidden-tools-list">
-        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-plus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-minus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
-            <i class="fa-regular fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-
-        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
-            <i class="fa-regular fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="visible-tools-list">
-        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
-            <i class="fa-regular fa-cog fa-spin"></i>
-        </li>
-        
-            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
-                <i class="arrow-up fas fa-arrow-up"></i>
-                <span class="percent"></span>
-            </li>
-        
-        
-    </ul>
-</div>
-
-    </div>
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
+	
 
 </main>
 
 
-    
-<script src="/blog/js/libs/Swup.min.js"></script>
 
-<script src="/blog/js/libs/SwupSlideTheme.min.js"></script>
+<script src="/blog/js/build/libs/Swup.min.js"></script>
 
-<script src="/blog/js/libs/SwupScriptsPlugin.min.js"></script>
+<script src="/blog/js/build/libs/SwupSlideTheme.min.js"></script>
 
-<script src="/blog/js/libs/SwupProgressPlugin.min.js"></script>
+<script src="/blog/js/build/libs/SwupScriptsPlugin.min.js"></script>
 
-<script src="/blog/js/libs/SwupScrollPlugin.min.js"></script>
+<script src="/blog/js/build/libs/SwupProgressPlugin.min.js"></script>
 
-<script src="/blog/js/libs/SwupPreloadPlugin.min.js"></script>
+<script src="/blog/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/blog/js/build/libs/SwupPreloadPlugin.min.js"></script>
 
 <script>
     const swup = new Swup({
@@ -893,44 +875,42 @@
 
 
 
+	
+<script src="/blog/js/build/tools/imageViewer.js" type="module"></script>
 
+<script src="/blog/js/build/utils.js" type="module"></script>
 
+<script src="/blog/js/build/main.js" type="module"></script>
 
-<script src="/blog/js/tools/imageViewer.js" type="module"></script>
+<script src="/blog/js/build/layouts/navbarShrink.js" type="module"></script>
 
-<script src="/blog/js/utils.js" type="module"></script>
+<script src="/blog/js/build/tools/scrollTopBottom.js" type="module"></script>
 
-<script src="/blog/js/main.js" type="module"></script>
+<script src="/blog/js/build/tools/lightDarkSwitch.js" type="module"></script>
 
-<script src="/blog/js/layouts/navbarShrink.js" type="module"></script>
-
-<script src="/blog/js/tools/scrollTopBottom.js" type="module"></script>
-
-<script src="/blog/js/tools/lightDarkSwitch.js" type="module"></script>
-
-<script src="/blog/js/layouts/categoryList.js" type="module"></script>
+<script src="/blog/js/build/layouts/categoryList.js" type="module"></script>
 
 
 
 
 
     
-<script src="/blog/js/tools/codeBlock.js" type="module"></script>
+<script src="/blog/js/build/tools/codeBlock.js" type="module"></script>
 
 
 
 
     
-<script src="/blog/js/layouts/lazyload.js" type="module"></script>
+<script src="/blog/js/build/layouts/lazyload.js" type="module"></script>
 
 
 
 
     
-<script src="/blog/js/tools/runtime.js"></script>
+<script src="/blog/js/build/tools/runtime.js"></script>
 
     
-<script src="/blog/js/libs/odometer.min.js"></script>
+<script src="/blog/js/build/libs/odometer.min.js"></script>
 
     
 <link rel="stylesheet" href="/blog/assets/odometer-theme-minimal.css">
@@ -939,10 +919,10 @@
 
 
   
-<script src="/blog/js/libs/Typed.min.js"></script>
+<script src="/blog/js/build/libs/Typed.min.js"></script>
 
   
-<script src="/blog/js/plugins/typed.js" type="module"></script>
+<script src="/blog/js/build/plugins/typed.js" type="module"></script>
 
 
 
@@ -955,22 +935,25 @@
 
 
     
-<script src="/blog/js/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+<script src="/blog/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
 
-<script src="/blog/js/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+<script src="/blog/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
 
-<script src="/blog/js/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
-
-
-
-
-<script src="/blog/js/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
-
-
-<script src="/blog/js/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+<script src="/blog/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
 
 
 
 
+<script src="/blog/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/blog/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
 </body>
+
 </html>
